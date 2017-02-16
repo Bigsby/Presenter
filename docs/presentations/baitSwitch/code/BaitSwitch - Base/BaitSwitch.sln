@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFApp", "WPFApp\WPFApp.csproj", "{CA5B7EFD-7E88-4B1A-8249-CB2C7343F4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidApp", "AndroidApp\AndroidApp.csproj", "{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Library", "BL.Library\BL.Library.csproj", "{E093BAB3-1B4A-4645-9C79-F1A56042A894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA5B7EFD-7E88-4B1A-8249-CB2C7343F4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5B7EFD-7E88-4B1A-8249-CB2C7343F4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5B7EFD-7E88-4B1A-8249-CB2C7343F4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5B7EFD-7E88-4B1A-8249-CB2C7343F4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3C53B8-1ADA-4FB6-85AD-E8EB2A71581E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E093BAB3-1B4A-4645-9C79-F1A56042A894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E093BAB3-1B4A-4645-9C79-F1A56042A894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E093BAB3-1B4A-4645-9C79-F1A56042A894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E093BAB3-1B4A-4645-9C79-F1A56042A894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+<div class="topicContainer">
+    <div>
+        <b class="topicTitle"
+           ng-class="{selectedTopic: $ctrl.topic.selected}"
+           ng-click="$ctrl.shower.show($ctrl.topic)">
+            {{$ctrl.previousPath ? $ctrl.previousPath + '.' : ''}}{{($ctrl.index + 1) + '. ' + $ctrl.topic.name}}
+        </b>
+        <span title="Has Slide" ng-if="$ctrl.topic.slide">&rect;</span>
+        <!--<span title="Expected Duration" ng-if="$ctrl.showDuration">({{::$ctrl.topic.duration}})</span>-->
+    </div>
+    <label ng-if="$ctrl.topic.innerTopics.length" ng-click="$ctrl.topic.expanded = !$ctrl.topic.expanded"
+           ng-class="{hasChildren:$ctrl.topic.innerTopics.length}">{{$ctrl.topic.expanded ? '<' : '+'}}</label>
+    <div class="innerTopicsContainer" ng-show="$ctrl.topic.expanded">
+        <topic ng-repeat="topic in ::$ctrl.topic.innerTopics"
+               topic="topic" shower="$ctrl.shower"
+               index="$index"
+               previous-path="($ctrl.previousPath ? $ctrl.previousPath + '.' : '') + ($ctrl.index + 1)"
+               show-duration="$ctrl.showDuration" />
+    </div>
+</div>

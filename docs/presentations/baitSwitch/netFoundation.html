@@ -1,0 +1,83 @@
+﻿<style>
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+        section > div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 22%;
+            height: 100px;
+            line-height: 15px;
+        }
+
+            section > div > h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            section > div > span {
+                font-size: 16px;
+                line-height: 1em;
+            }
+</style>
+<a href="https://dotnetfoundation.org/">https://dotnetfoundation.org/</a>
+<p>Indenpendant organization intended to produce open-source, license and platform agnostic, software. E.g.:</p>
+<section ng-init='projects = [
+               {
+                   "name": "Roslyn",
+                   "description": ".Net Compiler Platform"
+               },
+               {
+                   "name": ".Net Core",
+                   "description": "Cross-platform runtime"
+               },
+               {
+                   "name": ".Net Micro Framework",
+                   "description": "For embedded devices"
+               },
+               {
+                   "name": "ASP.Net Core",
+                   "description": "Cross-platform Web Server"
+               },
+               {
+                   "name": "ASP.Net MVC & Web API",
+                   "description": "Middleware for Web Applications"
+               },
+               {
+                   "name": "ASP.Net SignalR",
+                   "description": "Middleware for multi-platform duplex comunications"
+               },
+               {
+                   "name": "Entity Framework",
+                   "description": "Data Access library"
+               },
+               {
+                   "name": "Identity Server",
+                   "description": "OAuth Middleware"
+               },
+               {
+                   "name": "Kudu",
+                   "description": "Web Deployment Framework"
+               },
+               {
+                   "name": "MEF",
+                   "description": "Managed Extensibility Framework"
+               },
+                {
+                    "name": "Cake",
+                    "description": "Cross-platform build automation system in C# scripts"
+                },
+                {
+                    "name": "MailKit",
+                    "description": "Cross-platform mail client library with support for IMAP, POP3, and SMTP"
+                }
+         ]'>
+    <div ng-repeat="project in projects">
+        <h1>{{project.name}}</h1>
+        <span>{{project.description}}</span>
+    </div>
+</section>

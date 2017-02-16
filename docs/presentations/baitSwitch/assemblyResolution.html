@@ -1,0 +1,28 @@
+﻿<ol>
+    <li>Examining the Configuration Files</li>
+    <li>Checking for Previously Referenced Assemblies</li>
+    <li>Checking the Global Assembly Cache</li>
+    <li>
+        Locating the Assembly through Codebases or Probing:
+        <ul style="font-size:20px">
+            <li>
+                <b>Culture Defined:</b>
+                <ol>
+                    <li>[application base] / [culture] / [assembly name].dll</li>
+                    <li>[application base] / [culture] / [assembly name] / [assembly name].dll</li>
+                    <li>[application base] / [binpath] / [culture] / [assembly name].dll</li>
+                    <li>[application base] / [binpath] / [culture] / [assembly name] / [assembly name].dll</li>
+                </ol>
+            </li>
+            <li>
+                <b>Culture Not-Defined:</b>
+                <ol>
+                    <li>[application base] / [assembly name].dll</li>
+                    <li>[application base] / [assembly name] / [assembly name].dll</li
+                    <li>[application base] / [binpath] / [assembly name].dll</li>
+                    <li>[application base] / [binpath] / [assembly name] / [assembly name].dll</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+</ol>

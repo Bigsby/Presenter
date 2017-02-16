@@ -1,0 +1,31 @@
+<div class="presentationContainer">
+    <div class="header">
+        <a ui-sref="home">< Back</a><br />
+        <label class="title" for="showDuration" title="Click to toggle durations">{{::$ctrl.title}}</label>
+        <!--<input class="ng-hide" type="checkbox" ng-model="$ctrl.showDuration" id="showDuration" />-->
+        <!--<span title="Expected Duration" ng-class="{'hide':$ctrl.showDuration !== true}">({{::$ctrl.duration}})</span>-->
+        <button ng-click="$ctrl.togglePresentation()">Toggle Presentation</button>
+    </div>
+    <div class="contentContainer">
+        <div>
+            <topic ng-repeat="topic in ::$ctrl.innerTopics" shower="$ctrl.shower" topic="topic" index="$index" show-duration="$ctrl.showDuration" />
+        </div>
+        <div>
+            <h2 ng-if="$ctrl.selectedTopic.notes.length">Notes</h2>
+            <ul>
+                <li ng-repeat="note in $ctrl.selectedTopic.notes" ng-switch="note.type">
+                    <span ng-switch-when="text">{{note.content}}</span>
+                    <a ng-switch-when="link" ng-href="{{note.content}}" target="_blank">{{note.text || note.content}}</a>
+                    <ol ng-switch-when="steps">
+                        <li ng-repeat="step in note.content">{{step}}</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <span><b>&rarr;</b> / <b>&larr;</b> Expand / Collapse</span>
+        <span><b>&uarr;</b> / <b>&darr;</b> Navigate</span>
+        <span><b>SPACE</b> / <b>ENTER</b> Select Next Topic</span>
+    </footer>
+</div>

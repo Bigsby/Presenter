@@ -1,0 +1,20 @@
+<style>
+    .listContainer {
+        padding: 1em;
+    }
+
+    li {
+        cursor: pointer;
+    }
+
+        li:hover {
+            text-decoration: underline;
+        }
+</style>
+<div class="listContainer">
+    <h1>Available Presentations</h1>
+    <a href="https://github.com/Bigsby/Presenter/tree/gh-pages" target="_blank">GitHub Repo</a>
+    <ul>
+        <li ng-click="$ctrl.go(presentation)" ng-repeat="presentation in $ctrl.presentations">{{presentation.name}}</li>
+    </ul>
+</div>

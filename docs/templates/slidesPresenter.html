@@ -1,0 +1,40 @@
+﻿<style>
+    .container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    ng-include {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        font-size: 40px;
+    }
+
+        ng-include > * {
+            margin: auto !important;
+        }
+
+    .space {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+        .space div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+</style>
+<div class="container">
+    <div class="header space">
+        <div><span ng-repeat="p in $ctrl.path">{{p}} > </span><h1>{{$ctrl.topic.name}}</h1></div>
+        <h4>{{$ctrl.presentation.title}}</h4>
+    </div>
+    <ng-include src="$ctrl.slideUrl"></ng-include>
+</div>

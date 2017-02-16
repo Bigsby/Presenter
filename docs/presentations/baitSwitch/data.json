@@ -1,0 +1,249 @@
+﻿{
+  "title": "Bait & Switch",
+  "preparation": [
+    "Presentation with Architectural Graphics",
+    "Have nuget.exe in System Path",
+    "Create local File System NuGet source and configure in Visual Studio"
+  ],
+  "links": [
+    "http://log.paulbetts.org/the-bait-and-switch-pcl-trick/",
+    "http://www.informit.com/articles/article.aspx?p=2422804"
+  ],
+  "innerTopics": [
+    {
+      "name": "Overview",
+      "duration": 1,
+      "slide": "overview"
+    },
+    {
+      "name": "Cross Platform",
+      "innerTopics": [
+        {
+          "name": "Why cross platform?",
+          "duration": 2,
+          "slide": "whyCrossPlatform",
+          "notes": [
+            {
+              "type": "text",
+              "content": "More target platforms: Linux, Windows, Mac, Android, iOS"
+            },
+            {
+              "type": "text",
+              "content": "The more closed development is, the less it colides with future changes in frameworks"
+            },
+            {
+              "type": "text",
+              "content": "Forces a scoped-conscient approach and makes the choice of components (libraries) use more careful"
+            }
+          ]
+        },
+        {
+          "name": "CLRs",
+          "slide": "clrRuntimes"
+        },
+        {
+          "name": "PCL",
+          "innerTopics": [
+            {
+              "name": "What is PCL?",
+              "duration": 3,
+              "slide": "pclWhat"
+            },
+            {
+              "name": "Platforms & Profiles",
+              "duration": 5,
+              "slide": "pclProfiles",
+              "notes": [
+                {
+                  "type": "link",
+                  "text": "Portable Class Library (PCL) profiles",
+                  "content": "http://portablelibraryprofiles.apps.stephencleary.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": ".Net Standard",
+          "innerTopics": [
+            {
+              "name": "What is .Net Standard?",
+              "duration": 3,
+              "slide": "netWhat"
+            },
+            {
+              "name": "Supported Platforms (runtimes)",
+              "duration": 3,
+              "slide": "netPlatforms"
+            },
+            {
+              "name": "Version and lifetime",
+              "duration": 3,
+              "slide": "netVersions"
+            },
+            {
+              "name": "Architecture Overview",
+              "duration": 1,
+              "slide": "netArchitecture",
+              "notes": [
+                {
+                  "type": "link",
+                  "text": "Introducing .NET Standard",
+                  "content": "https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/"
+                },
+                {
+                  "type": "link",
+                  "text": ".Net Standard 2.0",
+                  "content": "https://weblog.west-wind.com/posts/2016/Nov/23/NET-Standard-20-Making-Sense-of-NET-Again"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PCL vs .Net Standard",
+          "duration": 3,
+          "slide": "pclVSnet",
+          "notes": [
+            {
+              "type": "text",
+              "content": "Profiles versioned independently"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bait & Switch",
+      "innerTopics": [
+        {
+          "name": "Concept",
+          "duration": 1,
+          "slide": "bsConcept"
+        },
+        {
+          "name": "Why/When?",
+          "duration": 2,
+          "slide": "bsWhyWhen",
+          "notes": [
+            {
+              "type": "text",
+              "content": "Light"
+            },
+            {
+              "type": "text",
+              "content": "Doesn't require enforcing an IoC Container"
+            }
+          ]
+        },
+        {
+          "name": "Assembly Resolution",
+          "duration": 3,
+          "slide": "assemblyResolution",
+          "notes": [
+            {
+              "type": "link",
+              "text": "How the Runtime Locates Assemblies",
+              "content": "https://msdn.microsoft.com/en-us/library/yx7xezcf(v=vs.110).aspx"
+            }
+          ]
+        },
+        {
+          "name": "How it works",
+          "slide": "bsWorks",
+          "duration": 2
+        },
+        {
+          "name": ".Net Core",
+          "duration": 5,
+          "slide": "bsCore",
+          "notes": [
+            {
+              "type": "link",
+              "text": ".NET Core",
+              "content": "https://docs.microsoft.com/en-us/dotnet/articles/core/index"
+            },
+            {
+              "type": "link",
+              "text": "Welcome to .NET Core",
+              "content": "https://dotnet.github.io/"
+            }
+          ]
+        },
+        {
+          "name": "Code Demo",
+          "slide": "codeDemo",
+          "notes": [
+            {
+              "type": "steps",
+              "content": [
+                "Open new Base Solution",
+                "Describe Solution Items",
+                "Create TheComponentLibrary Projects, Portable, WPF & Android"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NuGet",
+      "innerTopics": [
+        {
+          "name": "What is NuGet?",
+          "duration": 1,
+          "slide": "ngWhat"
+        },
+        {
+          "name": "How libraries are chosen",
+          "duration": 5,
+          "slide": "ngLibrary",
+          "notes": [
+            {
+              "type": "link",
+              "text": "Demystifying PCLs, .NET Core, DNX and UWP",
+              "content": "https://oren.codes/2015/06/16/demystifying-pcls-net-core-dnx-and-uwp-redux/0"
+            }
+          ]
+        },
+        {
+          "name": "Code Demo",
+          "slide": "codeDemo",
+          "notes": [
+            {
+              "type": "link",
+              "text": "Target Frameworks",
+              "content": "https://docs.microsoft.com/en-us/nuget/schema/target-frameworks"
+            },
+            {
+              "type": "link",
+              "text": "Create Cross-Platform Packages",
+              "content": "https://docs.microsoft.com/en-us/nuget/guides/create-cross-platform-packages"
+            },
+            {
+              "type": "steps",
+              "content": [
+                "Create .nuspec - > nuget spec «packageName»",
+                "Edit .nuspec - Correct Metadata; Add files (lib\\+ portable, net, monoandroid)",
+                "Create Package - > nuget pack «packageName».nuspec",
+                "Add NuGet package to Local Source",
+                "Open new Base Solution",
+                "Reference in Solution",
+                "Change BLClass code to call TheComponent Library"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".Net Foundation",
+      "duration": 5,
+      "slide": "netFoundation"
+    },
+    {
+      "name": "Q&A",
+      "slide": "qa"
+    }
+  ]
+}

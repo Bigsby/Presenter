@@ -1,0 +1,14 @@
+﻿<style>
+    .overviewContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<div class="overviewContainer" ng-controller="presentationController as vm" ng-init="vm.presentationId = 'baitSwitch'">
+    <div>
+        <h3 ng-repeat="topic in vm.innerTopics.slice(1)">{{$index+1}}. {{topic.name}}</h3>
+    </div>
+</div>
